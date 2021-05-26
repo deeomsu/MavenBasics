@@ -34,9 +34,6 @@ public class Magento
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div")));
 		String error = driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div")).getText();
 		System.out.println("Error :" +error);
-//			if(error.equals("Invalid login or password."))
-//				{ 	System.out.println("TestPass");
-//				}
 		Assert.assertEquals(error, "Invalid login or password."); // validation is done usinf Testng instead of abv. forif loop
 		driver.quit();
 		}
